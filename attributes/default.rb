@@ -1,4 +1,6 @@
 default[:monit][:notify_email]          = "notify@example.com"
+default[:monit][:notify_keyword] 		= "NOT ON"
+default[:monit][:notify_event] 			= [ 'action', 'instance', 'pid', 'ppid' ]
 
 default[:monit][:poll_period]           = 60
 default[:monit][:poll_start_delay]      = 120
@@ -16,6 +18,8 @@ default[:monit][:mailserver][:port] = nil
 default[:monit][:mailserver][:username] = nil
 default[:monit][:mailserver][:password] = nil
 default[:monit][:mailserver][:password_suffix] = nil
+default[:monit][:mailserver][:using] = nil
+default[:monit][:mailserver][:with] = nil
 
 default[:monit][:port] = 3737
 default[:monit][:address] = "localhost"
